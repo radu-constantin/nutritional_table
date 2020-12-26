@@ -5,6 +5,7 @@
     <title>your page title goes here</title>
     <meta charset="utf-8"/>
     <style>
+        /* HTML and Body */
         html {
             font-size: 28px;
             font-family: arial, Helvetica;
@@ -17,6 +18,39 @@
             padding: 10px 15px 15px 15px;
         }
 
+        /* Big Sections */
+        header {
+            border-bottom: 30px solid black;
+            padding-bottom: 5px;
+        }
+
+        section {
+            border-bottom: 15px solid black;
+            height: 3rem;
+            padding-bottom: 1px;
+            margin-bottom: 10px;
+        }
+
+        section h2:first-child {
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+        }
+
+        section dl:first-of-type {
+            margin-right: 219.5px;
+        }
+
+        section dl {
+            display: inline-block;
+            margin-top: 0px;
+        }
+
+        section dt {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* Fonts */
         h1 {
             font-family: arial, 'Franklin Gothic Medium';
             font-size: 2rem;
@@ -29,6 +63,7 @@
             font-family: arial, 'Franklin Gothic Medium';
             font-size: 1rem;
             margin-top: 10px;
+            margin-bottom: 0px;
         }
 
         p {
@@ -36,18 +71,56 @@
             padding-bottom: 0px;
         }
 
-        header {
-            border-bottom: 30px solid black;
-            padding-bottom: 5px;
+        /* Table Properties */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
         }
 
-        section h2:first-child {
-            border-bottom: 1px solid black;
-            padding-bottom: 10px;
+        thead {
+            text-align: right;
         }
 
-        dl {
-            display: inline-block;
+        table dl {
+            border-top: 1px solid black;
+            margin: 1.5px 0px 0px 0px;
+        } 
+
+        tr td:last-child {
+            text-align: right;
+        }
+
+        tr td:only-child {
+            text-align: left;
+        }
+
+        tfoot td:only-child {
+            padding: .5rem 0 .5rem .7rem;
+        }
+
+        table:first-of-type tbody:first-of-type tr:nth-child(2) td {
+            padding-left: 28px;
+        }
+
+        table:first-of-type tbody:first-of-type tr:nth-child(3) td {
+            padding-left: 28px;
+        }
+
+        table:first-of-type tbody:first-of-type tr:nth-child(7) td {
+            padding-left: 28px;
+        }
+
+        table:first-of-type tbody:first-of-type tr:nth-child(8) td {
+            padding-left: 28px;
+        }
+
+        tbody + tbody {
+            border-top: 20px solid black;
+        }
+
+        tbody + tbody tr {
+            border-top: 1px solid black;
         }
 
         dt {
@@ -56,8 +129,44 @@
 
         dd {
             display: inline-block;
+            margin-inline-start: 0px;
         }
 
+        tfoot {
+            font-size: .9rem;
+            text-align: left;
+            text-indent: -.7rem;
+            border-top: 1px solid black;
+        }
+
+        table:last-of-type {
+            font-size: .8rem;
+        }
+
+        table:last-of-type td {
+            padding: 3px 40px 0px 0px;
+        }
+
+        table:last-of-type thead {
+            text-align: left;
+            border-bottom: 1px solid black;
+        }
+
+        table:last-of-type thead th {
+            font-weight: normal;
+        }
+
+        table:last-of-type td {
+            text-align: left;
+        }
+
+        table:last-of-type tbody tr:nth-child(2) td:first-of-type {
+            padding-left: 34px;
+        }
+
+        table:last-of-type tbody tr:nth-child(6) td:first-of-type {
+            padding-left: 34px;
+        }
     </style>
 </head>
 
@@ -72,14 +181,13 @@
         <section>
             <h2>Amount Per Serving</h2>
             <dl>
-                <dt>Calories</dt>
+                <dt><strong>Calories</strong></dt>
                 <dd>230</dd>
             </dl>
             <dl>
                 <dt>Calories from Fat</dt>
                 <dd>40</dd>
             </dl>
-            <h3></h3>
         </section>
 
         <!--Second table - Daily Percentage Values-->
@@ -94,11 +202,11 @@
                 <tr>
                     <td>
                         <dl>
-                            <dt>Total Fat</dt>
+                            <dt><strong>Total Fat</strong></dt>
                             <dd>8g</dd>
                         </dl>
                     </td>
-                    <td>12%</td>
+                    <td><strong>12%</strong></td>
                 </tr>
 
                 <tr>
@@ -109,14 +217,14 @@
                         </dl>
                     </td>
                     <td>
-                        5%
+                        <strong>5%</strong>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <dl>
-                            <dt>Trans Fat</dt>
+                            <dt><em>Trans Fat</em></dt>
                             <dd>0g</dd>
                         </dl>
                     </td>
@@ -125,25 +233,24 @@
                 <tr>
                     <td>
                         <dl>
-                            <dt>Cholesterol</dt>
+                            <dt><strong>Cholesterol</strong></dt>
                             <dd>0mg</dd>
                         </dl>
                     </td>
                     <td>
-                        0%
-                    </td>
+                        <strong>0%</strong>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
                         <dl>
-                            <dt>Sodium</dt>
+                            <dt><strong>Sodium</strong></dt>
                             <dd>160mg</dd>
                         </dl>
                     </td>
                     <td>
-                        7%
+                        <strong>7%</strong>
                     </td>
                     </td>
                 </tr>
@@ -151,12 +258,12 @@
                 <tr>
                     <td>
                         <dl>
-                            <dt>Total Carbohidrate</dt>
+                            <dt><strong>Total Carbohydrate</strong></dt>
                             <dd>37g</dd>
                         </dl>
                     </td>
                     <td>
-                        12%
+                        <strong>12%</strong>
                     </td>
                     </td>
                 </tr>
@@ -169,13 +276,12 @@
                         </dl>
                     </td>
                     <td>
-                        16%
-                    </td>
+                        <strong>16%</strong>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <dl>
                             <dt>Sugars</dt>
                             <dd>1g</dd>
@@ -184,17 +290,86 @@
                 </tr>
                 
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <dl>
-                            <dt>Protein</dt>
+                            <dt><strong>Protein</strong></dt>
                             <dd>3g</dd>
                         </dl>
                     </td>
                 </tr>
             </tbody>
 
-            
+            <tbody>
+                <tr>
+                    <td>Vitamin A</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>Vitamin C</td>
+                    <td>8%</td>
+                </tr>
+                <tr>
+                    <td>Calcium</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>Iron</td>
+                    <td>45%</td>
+                </tr>
+            </tbody>
 
+            <tfoot>
+                <tr>
+                    <td colspan="3">* Percent Daily Values are based on a 2.000 calorie diet. Your daily value may be higher or lower depending on your calorie needs.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <table>
+            <thead>
+               <th></th>
+               <th>Calories</th>
+               <th>2,000</th>
+               <th>2,500</th> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Fat</td>
+                    <td>Less than</td>
+                    <td>65g</td>
+                    <td>80g</td>
+                </tr>
+                <tr>
+                    <td>Sat Fat</td>
+                    <td>Less than</td>
+                    <td>20g</td>
+                    <td>25g</td>
+                </tr>
+                <tr>
+                    <td>Cholesterol</td>
+                    <td>Less than</td>
+                    <td>300mg</td>
+                    <td>300mg</td>
+                </tr>
+                <tr>
+                    <td>Sodium</td>
+                    <td>Less than</td>
+                    <td>2,400mg</td>
+                    <td>2,400mg</td>
+                </tr>
+                <tr>
+                    <td>Total Carbohydrate</td>
+                    <td></td>
+                    <td>300g</td>
+                    <td>375g</td>
+                </tr>
+                <tr>
+                    <td>Dietary Fiber</td>
+                    <td></td>
+                    <td>25g</td>
+                    <td>30g</td>
+                </tr>
+            </tbody>
         </table>
     </main>
 </body>
